@@ -23,7 +23,7 @@ Spring Tools 3.9.14 RELEASE
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.springmvc</groupId>
-	<artifactId>myproject</artifactId>
+	<artifactId>miniboard</artifactId>
 	<name>spring-project</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
