@@ -4,13 +4,13 @@ Spring으로 작은 게시판을 만들어보자.
 
 ## 개발환경
 ```
+OS google cloud platform E2 (Debian 5.10.197-1 (2023-09-29) x86_64) 
 JAVA 11
 Apache Tomcat x.x
 Spring 3.1.1 RELEASE
 Spring Security 3.1.7.RELEASE
 eclipse 2020-09 (4.17.0)
 Spring Tools 3.9.14 RELEASE
-
 ```
  현재 진행중이 서비스가 regacy spring을 사용하고 있으므로 Spring 3.1.1을 쓰도록 한다. <br>
  사실 Spring 3 버전은 크게 어려울 것 없다. 하지만... Spring Security가 지옥문을 열었다. <br>
@@ -255,3 +255,13 @@ Spring Tools 3.9.14 RELEASE
 </project>
 
 ```
+
+## tomcat 설치
+```
+sudo apt-get update
+sudo apt-get install tomcat9
+sudo systemctl enable tomcat9   // 시스템 부팅시 자동 실행
+sudo systemctl start tomcat9
+```
+
+
