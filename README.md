@@ -256,6 +256,12 @@ Spring Tools 3.9.14 RELEASE
 
 ```
 
+## git 설치
+```
+sudo apt update
+sudo apt install git
+```
+
 ## tomcat 설치
 ```
 sudo apt-get update
@@ -264,4 +270,9 @@ sudo systemctl enable tomcat9   // 시스템 부팅시 자동 실행
 sudo systemctl start tomcat9
 ```
 
+## war 파일 배포
+```
+cd /var/lib/tomcat9/webapps
+git clone https://github.com/hanhunh89/spring-miniBoard ./my
+```
 
