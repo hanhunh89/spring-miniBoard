@@ -355,3 +355,8 @@ sudo nano /var/lib/tomcat9/webapps/miniboard/WEB-INF/spring/appServlet/servlet-c
                 <beans:property name="dataSource" ref="dataSource"/>
         </beans:bean>
 ```
+
+## tomcat 재시작
+```
+sudo service tomcat9 restart
+```
