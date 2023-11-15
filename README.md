@@ -360,3 +360,9 @@ sudo nano /var/lib/tomcat9/webapps/miniboard/WEB-INF/spring/appServlet/servlet-c
 ```
 sudo service tomcat9 restart
 ```
+
+
+# 끗
+이제 http://serverIp:8080/miniboard/ 로 접속하면 miniborad 사용 가능합니다.
+
+이어서 apache를 이용하여 tomcat을 이중화하겠습니다. 
