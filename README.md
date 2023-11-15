@@ -320,3 +320,38 @@ GRANT ALL PRIVILEGES ON myDB.* TO 'myuser'@'localhost' WITH GRANT OPTION;  //myu
 FLUSH PRIVILEGES;   // 적용
 
 ```
+
+## spring security 설정 변경
+security-context.xml과 servlet-context.xml의 db정보를 변경한다. 
+```
+sudo nano /var/lib/tomcat9/webapps/miniboard/WEB-INF/spring/security-context.xml
+
+        <!--  mysql -->
+        <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+                <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<!-- database name을 myDB로 변경 -->
+                <beans:property name="url" value="jdbc:mysql://localhost:3306/myDB?serverTimezone=UTC"/>
+		<!-- username을 myuser로 변경 -->
+                <beans:property name="username" value="myuser"/>
+                <beans:property name="password" value="1234"/>
+        </beans:bean>
+
+        <beans:bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+                <beans:property name="dataSource" ref="dataSource"/>
+        </beans:bean>
+
+sudo nano /var/lib/tomcat9/webapps/miniboard/WEB-INF/spring/appServlet/servlet-context.xml
+        <!--  mysql -->
+        <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+                <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<!-- database name을 myDB로 변경 -->
+                <beans:property name="url" value="jdbc:mysql://localhost:3306/myDB?serverTimezone=UTC"/>
+		<!-- username을 myuser로 변경 -->
+                <beans:property name="username" value="myuser"/>
+                <beans:property name="password" value="1234"/>
+        </beans:bean>
+
+        <beans:bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+                <beans:property name="dataSource" ref="dataSource"/>
+        </beans:bean>
+```
