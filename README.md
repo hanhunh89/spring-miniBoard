@@ -273,6 +273,19 @@ sudo systemctl start tomcat9
 ## war 파일 배포
 ```
 cd /var/lib/tomcat9/webapps
-git clone https://github.com/hanhunh89/spring-miniBoard ./my
+sudo git clone https://github.com/hanhunh89/spring-miniBoard ./my
+cd my
+sudo mv ./miniboard.war ../miniboard.war
+cd ..
+sudo rm -rf my
 ```
 
+## tomcat 재시작
+```
+sudo service tomcat9 restart
+```
+
+## DB(mariaDB) 설치
+```
+sudo apt install mariadb-server
+```
