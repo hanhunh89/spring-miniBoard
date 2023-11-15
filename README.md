@@ -289,3 +289,34 @@ sudo service tomcat9 restart
 ```
 sudo apt install mariadb-server
 ```
+
+## DB user 및 table 생성
+```
+sudo mysql -u root  // db 접속
+CREATE DATABASE myDB;   // myDB database 생성
+USE myDB;		// database 사용
+
+CREATE TABLE post (      //post table 생성
+    postId INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(30),
+    content TEXT,
+    view INT DEFAULT 0,
+    writer VARCHAR(30),
+    imageName VARCHAR(50)
+);
+
+CREATE TABLE user (    // user table 생성
+    userId VARCHAR(50) NOT NULL PRIMARY KEY,
+    password VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    auth VARCHAR(20) DEFAULT 'ROLE_USER'
+);
+
+
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY '1234';  //myuser 계정 생성
+
+GRANT ALL PRIVILEGES ON myDB.* TO 'myuser'@'localhost' WITH GRANT OPTION;  //myuser에 권한 부여
+
+FLUSH PRIVILEGES;   // 적용
+
+```
