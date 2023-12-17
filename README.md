@@ -14,7 +14,7 @@ Spring Tools 3.9.14 RELEASE
 ```
  현재 진행중이 서비스가 regacy spring을 사용하고 있으므로 Spring 3.1.1을 쓰도록 한다. <br>
  사실 Spring 3 버전은 크게 어려울 것 없다. 하지만... Spring Security가 지옥문을 열었다. <br>
- 이제 우리는 10년 전의 블로그를 찾아 헤메는 고고학자가 될 것이다. 
+ 10년 전의 블로그를 찾아 헤메는 고고학자가 된 느낌이었다. 
 
 ## POM.XML
 ```
